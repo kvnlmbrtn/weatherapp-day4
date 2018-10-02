@@ -1,8 +1,123 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: url('/images/whitenoise.png'), white;
 }
 
-a {
-  color: #00B7FF;
+#bannerUser {
+  display: block;
+  top: 0;
+  left:0;
+  width: 100vw;
+  text-align: center;
+  background: #e82744;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  margin-bottom: 3em;
+}
+
+#mapid {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 20px;
+}
+
+
+#btnSearch {
+  display: block;
+  height: 30px;
+  line-height: 1em;
+  font-size: 1em;
+  border: 1px #e82744 solid;
+  border-radius: 30px;
+  margin: 1em 1em 1em 1em;
+  text-align: center;
+  background-color: transparent;
+  color: #e82744;
+}
+
+      #btnSearch:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #e82744;
+        border: none;
+      }
+
+.formCity {
+  display: block;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+  #labelCity, #inputCity, #btnSearch {
+    display: block;
+    margin: auto 0.5em auto 0.5em;
+  }
+
+  #inputCity:focus {
+    border-bottom: 2px solid #e82744;
+  }
+
+.row-cities {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid #dedede;
+  border-radius: 20px;
+}
+
+.tempMin {
+  background-color: #1377bf;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-radius: 3px;
+  color: white;
+}
+
+.tempMax {
+  background-color: #e82744;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-radius: 3px;
+  color: white;
+}
+
+.iconsWeather {
+  display: block;
+  position: relative;
+  height: 30px;
+}
+
+.linkCities {
+  color: #8e8e8e;
+  text-decoration: none;
+  border-bottom: 1px dashed #8e8e8e;
+}
+
+      .linkCities:hover {
+        text-decoration: none;
+        color: #dedede;
+        border-bottom: 1px dashed #dedede;
+        cursor: pointer;
+      }
+
+
+
+
+
+#deleteIcon {
+  -webkit-appearance: none;
 }

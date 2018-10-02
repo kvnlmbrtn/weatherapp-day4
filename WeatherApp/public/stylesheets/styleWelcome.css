@@ -1,0 +1,86 @@
+body {
+  font-family:'Montserrat', sans-serif;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: url('/images/mountain.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+
+#bannerLogIn {
+  display: block;
+}
+
+#signUpButton {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 1px #e82744 solid;
+  border-radius: 30px;
+  margin: 1em 1em 1em 1em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  text-align: center;
+  background-color: transparent;
+  color: #e82744;
+}
+
+#signUpButton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #e82744;
+  border: none;
+}
+
+
+
+/* ------- Changement de partie de code ------- */
+
+/* Mise en page du formulaire de login au lancement de la page */
+
+
+#modalSignUpTitle {
+  text-align: center;
+  color: #e82744;
+}
+
+#userNameInput:focus {
+  border-bottom: 2px solid #e82744;
+}
+
+
+
+.formButtons {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendButtons, .closeButtons {
+  display: block;
+  position: relative;
+  width: 30%;
+  border: 1px #e82744 solid;
+  border-radius: 30px;
+  margin: 1em 1em 1em 1em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  text-align: center;
+  background-color: transparent;
+  color: #e82744;
+}
+
+      .sendButtons:hover, .closeButtons:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #e82744;
+        border: none;
+      }
