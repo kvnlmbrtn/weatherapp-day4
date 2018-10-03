@@ -32,12 +32,12 @@ body {
   color: #e82744;
 }
 
-#signUpButton:hover {
-  cursor: pointer;
-  color: white;
-  background-color: #e82744;
-  border: none;
-}
+      #signUpButton:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #e82744;
+        border: none;
+      }
 
 
 
