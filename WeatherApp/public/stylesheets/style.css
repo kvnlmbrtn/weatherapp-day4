@@ -113,11 +113,3 @@ body {
         border-bottom: 1px dashed #dedede;
         cursor: pointer;
       }
-
-
-
-
-
-#deleteIcon {
-  -webkit-appearance: none;
-}

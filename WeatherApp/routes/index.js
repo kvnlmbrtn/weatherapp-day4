@@ -15,6 +15,12 @@ router.post('/weather', function(req, res, next) {
 });
 
 
+
+router.post('/return-index', function(req, res, next) {
+  res.render('index', { userName: req.session.userName, cities});
+});
+
+
 //Gestion de l'ajout d'une nouvelle ville
 
 router.post('/search', function(req, res, next) {
@@ -28,18 +34,25 @@ router.post('/search', function(req, res, next) {
   request(requestText, function(error, response, body) {
       bodyModified = JSON.parse(body);
 
-      newCity.longitude = bodyModified.coord.lon;
-      newCity.latitude = bodyModified.coord.lat;
-      newCity.weatherDescription = bodyModified.weather[0].main;
-      newCity.tempMin = Math.round(bodyModified.main.temp_min -273.15);
-      newCity.tempMax = Math.round(bodyModified.main.temp_max -273.15);
-      newCity.icon = "/images/"+bodyModified.weather[0].icon+".png";
+      if (bodyModified.message == "city not found") {
+        res.render('errorCity', { userName: req.session.userName});
+      }
 
-      console.log(newCity);
+      if (bodyModified.message != "city not found") {
+        newCity.longitude = bodyModified.coord.lon;
+        newCity.latitude = bodyModified.coord.lat;
+        newCity.weatherDescription = bodyModified.weather[0].main;
+        newCity.tempMin = Math.round(bodyModified.main.temp_min - 273.15);
+        newCity.tempMax = Math.round(bodyModified.main.temp_max - 273.15);
+        newCity.icon = "/images/"+bodyModified.weather[0].icon+".png";
 
-      cities.push(newCity);
+        console.log(newCity);
 
-      res.render('index', { userName: req.session.userName, cities});
+        cities.push(newCity);
+
+        res.render('index', { userName: req.session.userName, cities});
+      }
+
     })
 
 });
